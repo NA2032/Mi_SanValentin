@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine's Day</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="valentine.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<div class="hearts-bg"></div>
+
+<div class="container">
+
+  <!-- FRAME 0 — SOBRE -->
+  <div class="frame active">
+    <div class="envelope" id="openEnvelope">
+      <div class="envelope-flap"></div>
+      <div class="envelope-body"></div>
+    </div>
+    <p class="hint">Toca para abrir</p>
+    <span class="signature">Con mucho cariño Noel</span>
+  </div>
+
+  <!-- FRAME 1 -->
+  <div class="frame">
+    <div class="letter-card">
+      <h1>Para ti Mi Amor</h1>
+      <p class="letter-text">
+        No sabía muy bien cómo decirlo,<br>
+        así que decidí escribirlo bonito.
+      </p>
+      <button class="next">Sigue leyendo</button>
+      <span class="signature">Con mucho cariño Noel</span>
+    </div>
+  </div>
+
+  <!-- FRAME 2 -->
+  <div class="frame">
+    <div class="letter-card">
+      <p class="letter-text">
+        Desde que llegaste a mi vida todo cambio,<br>
+        hiciste que todo tuviera más sentido, más luz y más alegría.
+      </p>
+      <button class="next">Sigue</button>
+      <span class="signature">Con mucho cariño Noel</span>
+    </div>
+  </div>
+
+  <!-- FRAME 3 -->
+  <div class="frame">
+    <div class="letter-card">
+      <p class="letter-text">
+        Lo que antes era rutina, ahora es emoción;<br>
+        lo que antes era normal, ahora es especial porque estás tú.
+      </p>
+      <button class="next">siguiente</button>
+      <span class="signature">Con mucho cariño Noel</span>
+    </div>
+  </div>
+
+  <!-- FRAME 4 -->
+  <div class="frame">
+    <div class="letter-card">
+      <p class="letter-text">
+        Gracias por tu paciencia, por tu ternura y por tu sonrisa que ilumina mis días.<br>
+        No sé qué hice para merecerte, pero sí sé que quiero seguir caminando contigo.
+      </p>
+      <button class="next">sigue</button>
+      <span class="signature">Con mucho cariño Noel</span>
+    </div>
+  </div>
+
+  <!-- FRAME 5 -->
+  <div class="frame">
+    <div class="letter-card">
+      <p class="letter-text">
+        Mi vida dio un giro hermoso el día que te conocí.<br>
+        eres lo mejor que me pudo pasar en la Vida mi amor
+      </p>
+      <button class="next">aun falta</button>
+      <span class="signature">Con mucho cariño Noel</span>
+    </div>
+  </div>
+
+  <!-- FRAME 6 -->
+  <div class="frame">
+    <div class="letter-card">
+      <p class="letter-text">
+        ahora te quiero hacer una pregunta <br>
+        
+      </p>
+      <button class="next">...</button>
+      <span class="signature">Con mucho cariño Noel</span>
+    </div>
+  </div>
+
+  <!-- FRAME 7 -->
+  <div class="frame">
+    <h1 class="big-question">¿Quieres ser mi San Valentin? 💗</h1>
+    <div class="options">
+      <button class="yes">Sí</button>
+      <button class="next">Obvioooooooooo</button>
+    </div>
+  </div>
+
+  <!-- FRAME 5 -->
+  <div class="frame">
+    <h1 class="big-title">Sabía que dirías que siiiiiiiiiii</h1>
+    <p class="subtitle">
+      Gracias por hacer mi mundo más bonito.<br>
+      No sabes lo infinitamente feliz que me haces cada dia mi Amor <br>
+      TE AMOOOOOOOOOOOOO MUCHOOOOOOOOOOOOO💗
+    </p>
+    <button class="next">Continuar</button>
+    <span class="signature">Con mucho cariño Noel</span>
+  </div>
+
+</div>
+
+<audio id="miMusica" loop>
+    <source src="amor.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+</audio>
+
+<script>
+const audio = document.getElementById("miMusica");
+
+function reproducirMusica() {
+    audio.play();
+    document.removeEventListener("click", reproducirMusica);
+    document.removeEventListener("touchstart", reproducirMusica);
+}
+
+document.addEventListener("click", reproducirMusica);
+document.addEventListener("touchstart", reproducirMusica);
+</script>
+
+<script src="valentine.js"></script>
+</body>
+</html>
