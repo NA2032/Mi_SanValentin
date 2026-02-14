@@ -122,24 +122,22 @@
 
 </div>
 
-<audio id="miMusica" loop>
-    <source src="amor.mp3" type="audio/mpeg">
-    Tu navegador no soporta audio.
-</audio>
+<body style="display:flex;justify-content:center;align-items:center;height:100vh;">
 
-<script>
-const audio = document.getElementById("miMusica");
+    <audio id="miCancion">
+        <source src="amor.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
 
-function reproducirMusica() {
-    audio.play();
-    document.removeEventListener("click", reproducirMusica);
-    document.removeEventListener("touchstart", reproducirMusica);
-}
+    <script>
+        const audio = document.getElementById("miCancion");
 
-document.addEventListener("click", reproducirMusica);
-document.addEventListener("touchstart", reproducirMusica);
-</script>
+        document.body.addEventListener("click", function() {
+            audio.play();
+        });
+    </script>
 
 <script src="valentine.js"></script>
 </body>
 </html>
+
