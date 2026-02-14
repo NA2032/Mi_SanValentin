@@ -122,22 +122,10 @@
 
 </div>
 
-<body style="display:flex;justify-content:center;align-items:center;height:100vh;">
-
-    <audio id="miCancion">
-        <source src="amor.mp3" type="audio/mpeg">
-        Tu navegador no soporta audio.
-    </audio>
-
-    <script>
-        const audio = document.getElementById("miCancion");
-
-        document.body.addEventListener("click", function() {
-            audio.play();
-        });
-    </script>
+ <audio id="lamp-audio" src="amor.mp3" preload="auto"></audio>
 
 <script src="valentine.js"></script>
 </body>
 </html>
+
 
